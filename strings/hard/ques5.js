@@ -30,4 +30,4 @@ const toggle = (char) => {
   }
 };
 
-toggleCase("gossssod afternoon");
+toggleCase("good afternoon");
