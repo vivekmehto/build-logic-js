@@ -6,15 +6,7 @@ const toggleCase = (str) => {
   for (let i = 0; i < str.length; i++) {
     if (isToggle) {
       isToggle = false;
-
-      let code = str.charCodeAt(i);
-      if (code > 96 && code < 123) {
-        result += String.fromCharCode(code - 32);
-      } else if (code > 64 && code < 91) {
-        result += String.fromCharCode(code + 32);
-      } else {
-        result += strp[i];
-      }
+      result += toggle(str[i]);
     } else {
       result += str[i];
       if (str[i] === " ") {
@@ -25,6 +17,17 @@ const toggleCase = (str) => {
     }
   }
   return result;
+};
+
+const toggle = (char) => {
+  let code = char.charCodeAt(0);
+  if (code > 96 && code < 123) {
+    return String.fromCharCode(code - 32);
+  } else if (code > 64 && code < 91) {
+    return String.fromCharCode(code + 32);
+  } else {
+    return strp[i];
+  }
 };
 
 toggleCase("gossssod afternoon");
