@@ -28,5 +28,5 @@ const mode = (arr) => {
   return `Mode is ${name}`;
 };
 
-// median([10, 4, 5, 2, 5, 6, 9]);
+median([10, 4, 5, 2, 5, 6, 9]);
 mode([10, 4, 5, 2, 5, 6, 9]);
